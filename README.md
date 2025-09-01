@@ -1,94 +1,85 @@
-# AI-powered-Exercise-form-checker
-1. Project Overview
+<p>
+  Perfect for <strong>fitness enthusiasts, trainers, or anyone working out at home</strong> who wants
+  <strong>instant feedback</strong> to improve technique.
+</p>
 
-This project uses your webcam, OpenCV, and MediaPipe Pose to analyze and provide real-time feedback on your form while performing dumbbell lateral raises.
+<hr>
 
-The system:
+<h2 id="demo-video">2. Demo Video</h2>
+<p>
+  Watch the project in action:<br>
+  <a href="YOUR_DEMO_LINK_HERE" target="_blank" rel="noopener noreferrer"><strong>Demo Video</strong></a>
+</p>
 
-Tracks arm movement and posture
+<hr>
 
-Counts repetitions automatically
+<h2 id="tech-stack">3. Tech Stack</h2>
+<ul>
+  <li>Python 3.x</li>
+  <li>OpenCV</li>
+  <li>MediaPipe (Pose)</li>
+  <li>NumPy</li>
+</ul>
 
-Provides form correction feedback (arm height, elbow straightness, shoulder relaxation, balance)
+<hr>
 
-Displays milestone messages when you hit certain rep counts
+<h2 id="setup">4. Setup Instructions</h2>
 
-👉 Perfect for fitness enthusiasts, trainers, or anyone working out at home who wants instant feedback to improve technique.
-
-2. Demo Video
-
-Check out the project in action:
-Demo Video
-
-3. Tech Stack
-
-Python 3.x
-
-OpenCV – Webcam input and video frame display
-
-MediaPipe Pose – Real-time human pose estimation
-
-NumPy – Angle calculations and numeric operations
-
-4. Setup Instructions
-1. Clone the repository
-git clone https://github.com/your-username/dumbbell-lateral-raise-tracker.git
+<h3>1) Clone the repository</h3>
+<pre><code>git clone https://github.com/your-username/dumbbell-lateral-raise-tracker.git
 cd dumbbell-lateral-raise-tracker
+</code></pre>
 
-2. Install dependencies
-pip install opencv-python mediapipe numpy
+<h3>2) Install dependencies</h3>
+<pre><code>pip install opencv-python mediapipe numpy
+</code></pre>
 
-3. Run the project
-python lateral_raise_checker.py
+<h3>3) Run the project</h3>
+<pre><code>python lateral_raise_checker.py
+</code></pre>
 
-5. Workflow & Usage
+<hr>
 
-The script starts video capture from your webcam.
+<h2 id="workflow-usage">5. Workflow &amp; Usage</h2>
+<ol>
+  <li>The script starts <strong>video capture</strong> from your webcam.</li>
+  <li><strong>MediaPipe Pose</strong> detects key body landmarks in each frame.</li>
+  <li>The program calculates:
+    <ul>
+      <li><strong>Shoulder-to-arm angles</strong> (to track lateral raises)</li>
+      <li><strong>Elbow straightness</strong></li>
+      <li><strong>Neck/shoulder posture</strong> (to detect shrugging)</li>
+      <li><strong>Left–right balance</strong> of arm heights</li>
+    </ul>
+  </li>
+  <li>A <strong>rep counter</strong> increments only when <strong>both arms complete a raise together</strong>.</li>
+  <li><strong>Milestone messages</strong> (e.g., “Good job! 10 reps!”) appear at specified rep counts.</li>
+  <li><strong>Form feedback</strong> overlays directly on the live video feed, with tips like:
+    <ul>
+      <li>“Raise left arm higher”</li>
+      <li>“Straighten right elbow”</li>
+      <li>“Relax shoulders down”</li>
+      <li>“Balance arm heights”</li>
+    </ul>
+  </li>
+  <li>The overlay shows:
+    <ul>
+      <li><strong>Rep count</strong></li>
+      <li><strong>Current stage</strong> (<em>up</em> or <em>down</em>)</li>
+      <li><strong>Form feedback</strong></li>
+    </ul>
+  </li>
+  <li>Press <kbd>q</kbd> to exit.</li>
+</ol>
 
-MediaPipe Pose detects key body landmarks in each frame.
+<hr>
 
-The program calculates:
+<h2 id="features">6. Features ✨</h2>
+<ul>
+  <li>Real-time posture and form detection</li>
+  <li>Rep counting with milestone tracking</li>
+  <li>Form correction feedback (arm height, elbow straightness, shoulder relaxation, balance)</li>
+  <li>Simple, clear UI overlay on the webcam feed</li>
+</ul>
 
-Shoulder-to-arm angles (to track lateral raises)
-
-Elbow straightness
-
-Neck/shoulder posture (to detect shrugging)
-
-Balance between left and right arms
-
-A rep counter increments only when both arms complete a raise together.
-
-Milestone messages (e.g., “Good job! 10 reps!”) appear at specific counts.
-
-Form feedback is shown directly on the live video:
-
-"Raise left arm higher"
-
-"Straighten right elbow"
-
-"Relax shoulders down"
-
-"Balance arm heights"
-
-The overlay displays:
-
-Rep count
-
-Current stage (up or down)
-
-Form feedback
-
-Press q to exit.
-
-6. Features ✨
-
-✅ Real-time posture and form detection
-
-✅ Rep counting with milestone tracking
-
-✅ Smart form feedback (arm height, elbows, shoulders, balance)
-
-✅ Minimal, clear UI overlay on the webcam feed
-
-✅ Works offline with just a webcam
+<hr>
